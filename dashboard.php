@@ -54,7 +54,7 @@ require_once 'includes/header.php';
     </div>
     <div class="dashboard-date">
         <span class="dashboard-date-badge">
-            <i class="fas fa-calendar-day"></i> <?php date_default_timezone_set('Asia/Jakarta'); echo tanggalIndo(time(), true, true); ?>
+            <i class="fas fa-calendar-day"></i> <?= tanggalIndo(time(), true, true) ?>
         </span>
     </div>
 </div>
