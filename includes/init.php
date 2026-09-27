@@ -7,6 +7,9 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+// Zona waktu global: WIB agar jam di laporan PDF, tanggal, dan waktu presensi
+// konsisten dengan jam sekarang (tanpa ini PHP default ke UTC -> selisih 7 jam).
+date_default_timezone_set('Asia/Jakarta');
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/db.php';
 require_once __DIR__ . '/functions.php';
